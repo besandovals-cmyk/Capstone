@@ -12,7 +12,7 @@ Aplicación web desarrollada para centralizar la gestión de inventario, alertas
 
 ```bash
 git clone [https://github.com/besandovals-cmyk/Capstone.git]
-cd Capstone
+cd Aplicacion
 py -m pip install -r Aplicacion/backend/requirements.txt
 ```
 
