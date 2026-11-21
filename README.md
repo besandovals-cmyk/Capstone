@@ -11,7 +11,7 @@ Aplicación web desarrollada para centralizar la gestión de inventario, alertas
 ## Instalación
 
 ```bash
-git clone [https://github.com/besandovals-cmyk/Capstone.git](https://github.com/besandovals-cmyk/Capstone.git)
+git clone [https://github.com/besandovals-cmyk/Capstone.git]
 cd Capstone
 py -m pip install -r Aplicacion/backend/requirements.txt
 ```
