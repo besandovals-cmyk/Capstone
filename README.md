@@ -6,13 +6,18 @@ Aplicación web desarrollada para centralizar la gestión de inventario, alertas
 
 - Lenguaje/framework: Python 3, Flask, HTML, CSS y JavaScript
 - Base de datos: SQLite
-- Otras dependencias relevantes: librerías indicadas en `Aplicacion/backend/requirements.txt` y Docker (para ejecución en contenedor)
+- Otras dependencias relevantes: librerías indicadas en `requirements.txt` dentro de `Sistema_Bomberos_Multicompania.zip` y Docker (para ejecución en contenedor)
 
 ## Instalación
 
 ```bash
-git clone [https://github.com/besandovals-cmyk/Capstone.git]
-cd Aplicacion
+git clone https://github.com/besandovals-cmyk/Capstone.git
+cd Capstone
+```
+
+Extrae `Fase 2/Evidencias Proyecto/Sistema_Bomberos_Multicompania.zip` en tu carpeta de trabajo e instala las dependencias desde `Aplicacion/backend/requirements.txt`:
+
+```bash
 py -m pip install -r Aplicacion/backend/requirements.txt
 ```
 
@@ -21,8 +26,7 @@ py -m pip install -r Aplicacion/backend/requirements.txt
 El sistema emplea una base de datos SQLite local y la creación inicial de usuario administrador mediante script local. No se deben incluir contraseñas, tokens ni datos reales en el repositorio ni en archivos de configuración versionados.
 
 ```bash
-cd Aplicacion/backend
-py crear_admin.py
+py Aplicacion/backend/crear_admin.py
 ```
 
 ## Uso
@@ -30,15 +34,13 @@ py crear_admin.py
 Para ejecutar la aplicación en entorno local:
 
 ```bash
-cd Aplicacion/backend
-py app.py
+py Aplicacion/backend/app.py
 ```
 
 Luego abre `http://127.0.0.1:5000` en el navegador para acceder al sistema. Para ejecutar las pruebas automatizadas en el backend:
 
 ```bash
-cd Aplicacion/backend
-py -m unittest discover
+py -m unittest discover -s Aplicacion/backend
 ```
 
 Para ejecutar con Docker desde la carpeta `Aplicacion`:
@@ -57,11 +59,17 @@ Crystal Clear · Desarrollo individual · Entregas incrementales por hito.
 ## Estructura del proyecto
 
 ```text
-Aplicacion/
-├── backend/          # Servidor Flask, lógica de alertas/Excel, SQLite y pruebas
-├── frontend/         # Interfaz HTML, CSS y JavaScript
-├── README_CIERRE.md  # Notas de cierre de la aplicación
-└── LEER_PRIMERO.txt  # Indicaciones iniciales
+Capstone/
+├── Fase 1/
+├── Fase 2/
+│   ├── Evidencias Individuales/
+│   ├── Evidencias Grupales/
+│   └── Evidencias Proyecto/
+│       ├── Evidencias De Documentacion/
+│       ├── Presentación_Proyecto.pptx
+│       └── Sistema_Bomberos_Multicompania.zip
+├── Fase 3/
+└── README.md
 ```
 
 ## Autores
